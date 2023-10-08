@@ -55,14 +55,7 @@ body {
     background-image: url("./assets/bg-4.jpg");
 }
 
-#moon {
-    width: 50%;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-}
-
-#sun{
+#sun, #moon{
     width: 50%;
     left: 50%;
     top: 50%;
@@ -108,6 +101,7 @@ body {
     grid-template-rows: repeat(2, 25vw);
     gap: 1vw;
     row-gap: 2vw;
+    margin-bottom: 50px;
 }
 
 .image__card {
@@ -122,32 +116,38 @@ body {
     height: 100%;
     width: 100%;
 }
+.card__front:hover {
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 1rem;
+}
 
 .card__back {
     position: absolute;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
-    background: white;
-    color: black;
     transform: rotateY(180deg);
     border-radius: 1rem;
+
+    background: white;
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .card__front img {
     border-radius: 1rem;
 }
 
-/* informative text */
-#parallax__text {
-
-}
-
 h2{
     position: relative;
-    font-size: 14vw;
-    color: #252839;
-    -webkit-text-stroke: 0.3vw #383d52;
+    font-size: 2vw;
+    color: black;
+    -webkit-text-stroke: 0.3vw black;
     text-transform: uppercase;
 }
 
@@ -156,20 +156,21 @@ h2::before{
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(100% - 3px);
+    width: 0;
     height: 100%;
-    color: #01fe97;
-    -webkit-text-stroke: 0 #383d52;
-    border-right: 2px solid #01fe97;
+    color: white;
+    -webkit-text-stroke: 0 black;
+    border-right: 2px solid white;
     overflow: hidden;
-    animation: animate 6s linear infinite;
+    animation: animate 15s linear infinite;
 }
 
 @keyframes animate {
-    0%, 10%, 100%{
-        width:0;
+    0%
+    {
+        width: 0;
     }
-    70%,90%{
-        width: fit-content;
+    100%{
+        width: 90%;
     }
 }

@@ -23,6 +23,9 @@ for (let i = 0; i < image_cards.length; i++) {
     })
 }
 
+aboutEclipseText.style.top = (sun.offsetTop) + "px"
+//informativeCard.style.top = (sun.offsetTop + aboutEclipseText.offsetHeight) + "px"
+
 document.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
@@ -52,6 +55,6 @@ document.addEventListener("scroll", () => {
         moon.style.transform = `scale(${-365+(progressOfScroll/1.5)}%)`
         aboutEclipseText.style.display = 'block'
         const contentSize = -190 +(progressOfScroll/4)
-        aboutEclipseText.style.transform = `scale(${contentSize < 0? 0:contentSize > 80? 80:contentSize}%) ` + `translateY(${progressOfScroll/14-10}vh)`
+        aboutEclipseText.style.transform = `scale(${contentSize < 0? 0:contentSize > 80? 80:contentSize}%) ` //+ `translateY(${progressOfScroll/14-10}vh)`
     }
  });
