@@ -52,7 +52,7 @@ body {
 /* eclipse animation */
 #parallax__eclipse{
     position: sticky;
-    background-image: url("../assets/bg-4.jpg");
+    background-image: url("./assets/bg-4.jpg");
 }
 
 #moon {
